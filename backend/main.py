@@ -44,12 +44,21 @@ async def lifespan(app: FastAPI):
 app = FastAPI(title="B.Tech AI & Programming FAQ Assistant API", lifespan=lifespan)
 
 # Allow the deployed frontend (Vercel) to call this API. Set ALLOWED_ORIGIN
-# in your Render environment variables to your exact Vercel URL once deployed;
-# defaults to "*" so local development works out of the box.
+# in your Render environment variables to your Vercel URL(s) once deployed.
+# Vercel often serves the same project under more than one URL (e.g. a short
+# alias and a longer deployment-specific one) — separate multiple origins
+# with commas, e.g.:
+#   ALLOWED_ORIGIN=https://circuitbot.vercel.app,https://circuitbot-abc123-team.vercel.app
+# Defaults to "*" so local development works out of the box.
 ALLOWED_ORIGIN = os.environ.get("ALLOWED_ORIGIN", "*")
+if ALLOWED_ORIGIN == "*":
+    allow_origins = ["*"]
+else:
+    allow_origins = [origin.strip() for origin in ALLOWED_ORIGIN.split(",") if origin.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[ALLOWED_ORIGIN] if ALLOWED_ORIGIN != "*" else ["*"],
+    allow_origins=allow_origins,
     allow_methods=["*"],
     allow_headers=["*"],
 )
