@@ -7,4 +7,4 @@
 // URL, e.g.:
 //   const API_BASE = "https://circuitbot-backend.onrender.com";
 
-const API_BASE = "http://localhost:8000";
+const API_BASE = "https://codealpha-chatbotfaq.onrender.com";
