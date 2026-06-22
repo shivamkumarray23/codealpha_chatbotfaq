@@ -56,7 +56,7 @@
 
     <div class="sidebar-section engine-note">
       <span class="section-label">// stack</span>
-      <p>FastAPI + SQLite backend. Matching uses a real pretrained sentence-transformer (all-MiniLM-L6-v2) to embed questions and compare them by cosine similarity — genuine semantic AI, not keyword rules.</p>
+      <p>FastAPI + SQLite backend. Matching uses scikit-learn TF-IDF vectorization (unigrams + bigrams) and cosine similarity to score questions against the FAQ set — a real, explainable ML technique, not hardcoded keyword rules.</p>
     </div>
   </aside>
 
