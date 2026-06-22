@@ -6,7 +6,7 @@
 
 *A full-stack AI chatbot that answers 87 curated questions on AI, Machine Learning, Deep Learning, NLP, programming languages, DSA, databases, web development, and careers — using real machine learning (TF-IDF + cosine similarity), not hardcoded rules.*
 
-[![Live Frontend](https://img.shields.io/badge/Frontend-Live-brightgreen?style=for-the-badge&logo=vercel)](https://codealpha-chatbotfaq-skr126852-8507s-projects.vercel.app/)
+[![Live Frontend](https://img.shields.io/badge/Frontend-Live-brightgreen?style=for-the-badge&logo=vercel)](https://codealpha-chatbotfaq.vercel.app/)
 [![Live Backend](https://img.shields.io/badge/Backend-Live-success?style=for-the-badge&logo=fastapi)](https://codealpha-chatbotfaq.onrender.com/docs)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
